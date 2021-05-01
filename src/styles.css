@@ -1,4 +1,3 @@
-
 .weather-app {
     background: linear-gradient(to right, pink, orange);
     color: rgb(94, 34, 34);
@@ -72,6 +71,7 @@
 
 #coder{
     font-size: 12px;
+    font-family: monospace;
     text-align: center;
     margin-top: 20px;
     color: rgb(94, 34, 34);
