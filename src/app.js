@@ -64,6 +64,7 @@ function handleSubmit(event){
     let cityInput = document.querySelector("#search-input").value;
     showCity(cityInput);
 }
+
 let searchForm=document.querySelector("#search-form");
 searchForm.addEventListener("submit",handleSubmit);
 
@@ -77,19 +78,21 @@ function getCurrentLocation(event) {
   }
   
 //get position from server
-  function showPosition(position) {
-    //console.log(position.coords.latitude);
-    //console.log(position.coords.longitude);
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
-    let apiKey = `02466604a7f7484e8595ebcea0826deb`;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+function showPosition(position) {
+  //console.log(position.coords.latitude);
+  //console.log(position.coords.longitude);
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiKey = `02466604a7f7484e8595ebcea0826deb`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   
-    axios.get(apiUrl).then(showWeather);
-  }
+  axios.get(apiUrl).then(showWeather);
+}
   
-  let currentButton = document.querySelector(".button-current");
-  currentButton.addEventListener("click",getCurrentLocation);
+let currentButton = document.querySelector(".button-current");
+currentButton.addEventListener("click",getCurrentLocation);
 
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrtemperature);
 
 
