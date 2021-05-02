@@ -99,16 +99,27 @@ function showFahrtemperature(event){
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 
+  let tempFeelElement = document.querySelector("#feels-like");
+  tempFeelElement.innerHTML = Math.round(fahrenheitTemp);
+
+  let tempUnit = document.querySelector("#celsius-feel");
+  tempUnit.innerHTML = "ºF";
+
   //remove the active class from celsius link 
   celsiusLink.classList.remove("active");
   //add active class to fahrenheit link
   fahrenheitLink.classList.add("active");
- 
 }
 function showCelsiusTemperature(event){
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemp);
+
+  let tempFeelElement = document.querySelector("#feels-like");
+  tempFeelElement.innerHTML = Math.round(celsiusTemp);
+
+  let tempUnit = document.querySelector("#celsius-feel");
+  tempUnit.innerHTML = "ºC";
 
   fahrenheitLink.classList.remove("active");
   celsiusLink.classList.add("active");
