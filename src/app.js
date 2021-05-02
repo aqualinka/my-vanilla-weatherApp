@@ -1,3 +1,6 @@
+//global variable --> temperature
+let celsiusTemp = null;
+
 //show current date and time
  function formatDate(timestamp){
     let current = new Date(timestamp);
@@ -24,12 +27,13 @@
     return currentDate;
     }
 
+
 //show weather
 function showWeather(response){
-  console.log(response);
+  //console.log(response);
 
   let cityHeadingElement = document.querySelector("#city-heading");
-  let tempCelsiusElement = document.querySelector("#celsius");
+  let tempCelsiusElement = document.querySelector("#temperature");
   let tempFeelElement = document.querySelector("#feels-like");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");  
@@ -37,10 +41,11 @@ function showWeather(response){
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
-  
+  //temperature in celsius
+  celsiusTemp = response.data.main.temp;
   
   cityHeadingElement.innerHTML = response.data.name;
-  tempCelsiusElement.innerHTML = Math.round(response.data.main.temp);
+  tempCelsiusElement.innerHTML = Math.round(celsiusTemp);
   tempFeelElement.innerHTML = Math.round(response.data.main.feels_like);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -68,9 +73,6 @@ function handleSubmit(event){
 let searchForm=document.querySelector("#search-form");
 searchForm.addEventListener("submit",handleSubmit);
 
-
-showCity("arrecife");
-
 //get current location- handle click button
 function getCurrentLocation(event) {
     event.preventDefault();
@@ -88,11 +90,36 @@ function showPosition(position) {
   
   axios.get(apiUrl).then(showWeather);
 }
-  
+showCity("arrecife");
+
+//show fahrenheit temperature
+function showFahrtemperature(event){
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+
+  //remove the active class from celsius link 
+  celsiusLink.classList.remove("active");
+  //add active class to fahrenheit link
+  fahrenheitLink.classList.add("active");
+ 
+}
+function showCelsiusTemperature(event){
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+}
+
+
 let currentButton = document.querySelector(".button-current");
 currentButton.addEventListener("click",getCurrentLocation);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrtemperature);
 
-
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemperature);

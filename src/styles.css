@@ -50,7 +50,7 @@
 }
 #description{
     font-size: 28px;
-    margin: 20px 0;
+    margin: 40px 0 0;
     line-height: 1;
 }
 
@@ -58,7 +58,7 @@
     height: 110px;
     width: 110px;
 }
-#celsius{
+#temperature{
     font-weight: bold;
     font-size: 60px;
 }
@@ -67,6 +67,16 @@
     font-size: 20px;
     top: -16px;
     left:2px;
+}
+#weather-temp a {
+    text-decoration: none;
+}
+.active{
+    color:  rgb(94, 34, 34);
+    cursor: default;
+}
+.active:hover{
+    color: inherit;
 }
 #real-feel{
     font-size: 13px;
