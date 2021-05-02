@@ -17,6 +17,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
   <body>
@@ -24,7 +25,7 @@
         <div class="app">
             <form id="search-form">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-5">
                         <input
                         autofocus="on"
                         id="search-input"
@@ -33,11 +34,13 @@
                         placeholder="enter a city"
                         />
                     </div>
-                    <div class="col-3">
+                    <div class="col-4">
                         <button type="submit" class="btn w-100 button-submit">search</button>
                     </div>
-                    <div class="col-3">
-                        <button type="button" class="btn w-100 button-current">current</button>
+                    <div class="col-2">
+                        <button type="button" class="btn button-current">
+                            <i class="fas fa-map-marker-alt position"></i>
+                        </button>
                     </div>
                 </div>  
             </form>
