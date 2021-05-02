@@ -46,6 +46,7 @@
 }
 #city-heading{
     font-weight: bold;
+    text-align: center;
 }
 #description{
     font-size: 28px;
@@ -55,7 +56,7 @@
 #temperature{
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
    
 }
 #icon{
@@ -69,7 +70,7 @@
 #units{
     position: relative;
     font-size: 20px;
-    top: -36px;
+    top: -12px;
     left:2px;
 }
 #real-feel{
