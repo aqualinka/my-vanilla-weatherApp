@@ -53,12 +53,14 @@
     line-height: 1;
 }
 #temperature{
-    font-size: 40px;
-    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+   
 }
 #icon{
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
 }
 #celsius{
     font-weight: bold;
@@ -67,8 +69,18 @@
 #units{
     position: relative;
     font-size: 20px;
-    top: -28px;
-    left:5px;
+    top: -36px;
+    left:2px;
+}
+#real-feel{
+    font-size: 13px;
+    text-align: center;
+}
+#celsius-feel{
+    position: relative;
+    font-size: 8px;
+    top: -3px;
+    left: 1px;
 }
 
 #coder{

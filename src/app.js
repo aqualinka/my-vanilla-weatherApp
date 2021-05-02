@@ -30,6 +30,7 @@ function showWeather(response){
 
   let cityHeadingElement = document.querySelector("#city-heading");
   let tempCelsiusElement = document.querySelector("#celsius");
+  let tempFeelElement = document.querySelector("#feels-like");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");  
   let windElement = document.querySelector("#wind-speed");
@@ -40,6 +41,7 @@ function showWeather(response){
   
   cityHeadingElement.innerHTML = response.data.name;
   tempCelsiusElement.innerHTML = Math.round(response.data.main.temp);
+  tempFeelElement.innerHTML = Math.round(response.data.main.feels_like);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
