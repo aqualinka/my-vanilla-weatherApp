@@ -87,6 +87,27 @@
     top: -3px;
     left: 1px;
 }
+.weather-forecast{
+    font-size: 14px;
+}
+.weather-forecast img {
+    width: 60px;
+    border: 1px solid green;
+}
+.weather-forecast-col{
+    text-align: center;
+    border: 1px solid blue;
+}
+ .weather-forecast .temp{
+    font-size:11px;
+}
+.temp-for-max{
+    font-weight: 700;
+}
+.temp-for-min{
+   color: rgb(104, 86, 86);
+}
+
 
 #coder{
     font-size: 12px;
