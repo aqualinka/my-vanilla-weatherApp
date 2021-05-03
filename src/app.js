@@ -26,13 +26,15 @@ let celsiusTemp = null;
     let currentDate = `${day} ${hours}:${minutes}`;
     return currentDate;
     }
-//new function displaying forecast
-function displayForecast(){
-  let forecastElement = document.querySelector("#forecast");
 
+//new function displaying forecast
+function displayForecast(response){
+  console.log(response.data.daily);
+
+  let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
 
-  let days = ["monday","tuesday","wednesday","thursday", "friday"];
+  let days = ["monday","tuesday","wednesday","thursday", "friday", "saturday"];
 
   days.forEach(function(day){
     forecastHTML += `
@@ -47,10 +49,15 @@ function displayForecast(){
     </div>
   `;
   });
-
 forecastHTML += `</div>`;
-
 forecastElement.innerHTML = forecastHTML;
+}
+//do api call for weather forecast through coordinates
+function getForecast(coordinates){
+  console.log(coordinates);
+  let apiKey = "02466604a7f7484e8595ebcea0826deb";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 //show weather
@@ -65,9 +72,6 @@ function showWeather(response){
   let windElement = document.querySelector("#wind-speed");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
-
-  //call the forecast function
-  displayForecast();
 
   //temperature in celsius
   celsiusTemp = response.data.main.temp;
@@ -84,6 +88,8 @@ function showWeather(response){
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   
+  //call the forecast function
+  getForecast(response.data.coord);
 }
 //show city
 function showCity(city) {
@@ -118,7 +124,6 @@ function showPosition(position) {
   
   axios.get(apiUrl).then(showWeather);
 }
-showCity("arrecife");
 
 //show fahrenheit temperature
 function showFahrtemperature(event){
@@ -162,3 +167,5 @@ fahrenheitLink.addEventListener("click", showFahrtemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+showCity("arrecife");
