@@ -36,7 +36,7 @@
     color:rgb(173, 29, 51);
 }
 #overview{
-    margin-top: 30px;
+    margin: 40px auto;
 }
 .list{
     margin: 0;
@@ -93,14 +93,11 @@
     text-align: center;
 }
 .weather-forecast img {
-    width: 60px;
-    border: 1px solid green;
+    width: 60px;   
     text-align: center;
 }
-.weather-forecast-col{
-    border: 1px solid blue;
-}
- .weather-forecast .temp{
+
+.weather-forecast .temp{
     font-size:10px;
 }
 .temp-for-max{
