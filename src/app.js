@@ -26,7 +26,32 @@ let celsiusTemp = null;
     let currentDate = `${day} ${hours}:${minutes}`;
     return currentDate;
     }
+//new function displaying forecast
+function displayForecast(){
+  let forecastElement = document.querySelector("#forecast");
 
+  let forecastHTML = `<div class="row">`;
+
+  let days = ["monday","tuesday","wednesday","thursday", "friday"];
+
+  days.forEach(function(day){
+    forecastHTML += `
+    <div class="col-2 weather-forecast-col">
+        <div class="weather-forecast-day">
+            ${day}
+        </div>
+        <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="fewclouds">
+        <div>
+            <span class="temp-for-max temp">20ºC</span>|<span class="temp-for-min temp">16ºC</span>
+        </div>
+    </div>
+  `;
+  });
+
+forecastHTML += `</div>`;
+
+forecastElement.innerHTML = forecastHTML;
+}
 
 //show weather
 function showWeather(response){
@@ -40,6 +65,9 @@ function showWeather(response){
   let windElement = document.querySelector("#wind-speed");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
+
+  //call the forecast function
+  displayForecast();
 
   //temperature in celsius
   celsiusTemp = response.data.main.temp;

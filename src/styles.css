@@ -46,7 +46,7 @@
 #city-heading{
     font-weight: bold;
     text-align: center;
-    text-shadow: 2px 2px  rgb(238, 160, 173);
+    text-shadow: 2px 2px white;
 }
 #description{
     font-size: 28px;
@@ -90,17 +90,18 @@
 }
 .weather-forecast{
     font-size: 14px;
+    text-align: center;
 }
 .weather-forecast img {
     width: 60px;
     border: 1px solid green;
+    text-align: center;
 }
 .weather-forecast-col{
-    text-align: center;
     border: 1px solid blue;
 }
  .weather-forecast .temp{
-    font-size:11px;
+    font-size:10px;
 }
 .temp-for-max{
     font-weight: 700;
