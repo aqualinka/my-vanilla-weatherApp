@@ -58,7 +58,7 @@ function displayForecast(response){
   //let days = ["monday","tuesday","wednesday","thursday", "friday", "saturday"];
 
   forecast.forEach(function(forecastday, index){
-    if(index < 6){
+    if(index < 7 && index > 0){
       forecastHTML += `
       <div class="col-2 weather-forecast-col">
           <div class="weather-forecast-day">
