@@ -13,9 +13,23 @@ let celsiusTemp = null;
     "friday",
     "saturday"
     ];
+    let months = ["January","February","March","April","May","Jun","July","August",
+    "September","October","November","December"];
     let day = days[current.getDay()];
+    let date = current.getDate();
+    let month = months[current.getMonth()];
     let hours = current.getHours();
     let minutes = current.getMinutes();
+
+    if(date == 1){
+      date = `${date}st`;
+    } else if(date == 2){
+      date = `${date}nd`;
+    } else if(date == 3){
+      date = `${date}rd`;
+    } else{
+      date = `${date}th`;
+    }
 
     if (hours < 10){
         hours = `0${hours}`;
@@ -23,9 +37,10 @@ let celsiusTemp = null;
     if (minutes < 10){
         minutes = `0${minutes}`;
     }
-    let currentDate = `Hello! It's ${day} ${hours}:${minutes}`;
+    let currentDate = `Hello! It's ${day} ${date} ${month} ${hours}:${minutes}`;
     return currentDate;
-    }
+}
+
 //function creating day of the week for the weather forecast function
 function formatDay(timestamp){
   let date = new Date(timestamp *1000);
