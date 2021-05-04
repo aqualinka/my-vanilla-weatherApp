@@ -23,6 +23,11 @@
   <body>
     <div class="container weather-app mt-3">
         <div class="app">
+            <div class="row date-actual">
+                <div class="col">
+                    <strong id="date"></strong>
+                </div>
+            </div>
             <form id="search-form">
                 <div class="row">
                     <div class="col-5">
@@ -46,7 +51,7 @@
             </form>
 
             <div id="overview">
-                <div class="row">
+                <div class="row ">
                     <div class="col-6">
                         <h1 id="city-heading"></h1> 
                         <div class="clearfix" id="weather-temp">      
@@ -57,10 +62,6 @@
                     </div>            
                     <div class="col-6">
                         <ul class="list">
-                            <li>
-                                last updated:
-                                <strong id="date"></strong>
-                            </li>
                             <li id="description"></li>   
                             <li>wind speed <span id="wind-speed"></span>km/h</li>
                             <li>humidity <span id="humidity"></span>%</li>
@@ -68,9 +69,7 @@
                     </div>                      
                 </div> 
             </div>   
-            <div class="weather-forecast" id="forecast">          
-               
-            </div>
+            <div class="weather-forecast" id="forecast"></div>
         </div>    
     </div>
     <div id="coder">

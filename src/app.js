@@ -23,7 +23,7 @@ let celsiusTemp = null;
     if (minutes < 10){
         minutes = `0${minutes}`;
     }
-    let currentDate = `${day} ${hours}:${minutes}`;
+    let currentDate = `Hello! It's ${day} ${hours}:${minutes}`;
     return currentDate;
     }
 //function creating day of the week for the weather forecast function

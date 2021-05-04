@@ -10,6 +10,10 @@
 .app{
     padding: 40px 10px;
 }
+.date-actual{ 
+    margin-bottom: 20px;
+    text-align: center;
+}
 .button-submit {
     background-color: rgb(94, 34, 34);
     color: white;
@@ -91,6 +95,9 @@
 .weather-forecast{
     font-size: 14px;
     text-align: center;
+    background-color:  rgba(238, 160, 173, 0.3);
+    border-radius: 10px;
+    padding: 10px;
 }
 .weather-forecast img {
     width: 60px;   
