@@ -2,7 +2,7 @@
     background: linear-gradient(to right, pink, orange);
     color: rgb(94, 34, 34);
     font-family: "Hachi Maru Pop", cursive;
-    max-width: 750px;
+    max-width: 700px;
     min-width: 350px;
     box-sizing: border-box;
     box-shadow: 5px 5px 20px rgb(54, 9, 9), -5px -5px 10px rgb(54, 9, 9);
@@ -11,7 +11,7 @@
     padding: 20px 10px;
 }
 .date-actual{ 
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-align: center;
 }
 .button-submit {
@@ -24,8 +24,7 @@
 .button-submit:hover {
     cursor: pointer;
     background-color:rgb(173, 29, 51);
-    color: white;
-    
+    color: white;  
 }
 .position{
     font-size: 1.5em;
@@ -38,9 +37,6 @@
 }
 .button-current:hover{
     color:rgb(173, 29, 51);
-}
-#overview{
-    margin: 5px auto;
 }
 .list{
     margin: 0;
@@ -62,8 +58,8 @@
     margin: 0 auto ;
 }
 #weather-temp{
-    border: 1px solid blue;
     text-align: center;
+  
 }
 #temperature{
     font-weight: bold;
@@ -84,28 +80,29 @@
     top: -3px;
     left: 1px;
 }
-#weather-details{
-    border: 1px solid green;
-}
+
 #next-days-title{
-   text-align: center;
+    text-align: center;
     font-weight: 700;
     margin: 10px 0;
 }
 .weather-forecast{
-    font-size: 14px;
     text-align: center;
+    font-size: 14px;
     background-color:  rgba(238, 160, 173, 0.3);
-    border-radius: 10px;
-    padding: 5px;
-    box-shadow: 2px 2px 5px rgb(216, 133, 133), -2px -2px 5px rgb(216, 133, 133);
+    border-radius:  10px;
+    padding: 10px;
+    border: 2px dotted  rgb(94, 34, 34);
+
 }
 .weather-forecast img {
-    width: 60px;   
-    text-align: center;
+    width: 46px;  
+    display: block;
+    margin: 0 auto;
 }
 .weather-forecast .temp{
     font-size:10px;
+    letter-spacing: -1px;
 }
 .weather-forecast-day{
     font-weight: 700;
