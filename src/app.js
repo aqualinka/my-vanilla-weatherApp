@@ -58,13 +58,13 @@ function displayForecast(response){
   //let days = ["monday","tuesday","wednesday","thursday", "friday", "saturday"];
 
   forecast.forEach(function(forecastday, index){
-    if(index < 7 && index > 0){
+    if(index < 6 && index > 0){
       forecastHTML += `
       <div class="col-2 weather-forecast-col">
+          <img src="http://openweathermap.org/img/wn/${forecastday.weather[0].icon}@2x.png" alt="${forecastday.weather[0].icon}">
           <div class="weather-forecast-day">
               ${formatDay(forecastday.dt)}
           </div>
-          <img src="http://openweathermap.org/img/wn/${forecastday.weather[0].icon}@2x.png" alt="${forecastday.weather[0].icon}">
           <div>
               <span class="temp-for-max temp">${Math.round(forecastday.temp.max)}ºC</span>|<span class="temp-for-min temp">${Math.round(forecastday.temp.min)}ºC</span>
           </div>
