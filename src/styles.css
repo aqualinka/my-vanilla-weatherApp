@@ -8,10 +8,10 @@
     box-shadow: 5px 5px 20px rgb(54, 9, 9), -5px -5px 10px rgb(54, 9, 9);
 }
 .app{
-    padding: 40px 10px;
+    padding: 20px 10px;
 }
 .date-actual{ 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
 }
 .button-submit {
@@ -40,7 +40,7 @@
     color:rgb(173, 29, 51);
 }
 #overview{
-    margin: 40px auto;
+    margin: 5px auto;
 }
 .list{
     margin: 0;
@@ -50,41 +50,33 @@
 #city-heading{
     font-weight: bold;
     text-align: center;
-    text-shadow: 2px 2px white;
 }
 #description{
-    font-size: 28px;
-    margin: 40px 0 0;
+    font-size: 24px;
     line-height: 1;
 }
-
 #icon{
-    height: 110px;
-    width: 110px;
+    height: 90px;
+    width: 90px;
+    display: block;
+    margin: 0 auto ;
+}
+#weather-temp{
+    border: 1px solid blue;
+    text-align: center;
 }
 #temperature{
     font-weight: bold;
-    font-size: 60px;
+    font-size: 50px;
 }
 #units{
     position: relative;
     font-size: 20px;
-    top: -16px;
+    top: -22px;
     left:2px;
-}
-#weather-temp a {
-    text-decoration: none;
-}
-.active{
-    color:rgb(173, 29, 51);
-    cursor: default;
-}
-.active:hover{
-    color: inherit;
 }
 #real-feel{
     font-size: 13px;
-    text-align: center;
 }
 #celsius-feel{
     position: relative;
@@ -92,22 +84,31 @@
     top: -3px;
     left: 1px;
 }
+#weather-details{
+    border: 1px solid green;
+}
+#next-days-title{
+   text-align: center;
+    font-weight: 700;
+    margin: 10px 0;
+}
 .weather-forecast{
     font-size: 14px;
     text-align: center;
     background-color:  rgba(238, 160, 173, 0.3);
     border-radius: 10px;
-    padding: 10px;
-   
+    padding: 5px;
     box-shadow: 2px 2px 5px rgb(216, 133, 133), -2px -2px 5px rgb(216, 133, 133);
 }
 .weather-forecast img {
     width: 60px;   
     text-align: center;
 }
-
 .weather-forecast .temp{
     font-size:10px;
+}
+.weather-forecast-day{
+    font-weight: 700;
 }
 .temp-for-max{
     font-weight: 700;
