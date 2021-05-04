@@ -5,7 +5,7 @@
     max-width: 750px;
     min-width: 350px;
     box-sizing: border-box;
-    box-shadow: 5px 5px 20px rgb(54, 9, 9), -5px 5px 20px rgb(54, 9, 9);
+    box-shadow: 5px 5px 20px rgb(54, 9, 9), -5px -5px 10px rgb(54, 9, 9);
 }
 .app{
     padding: 40px 10px;
@@ -98,6 +98,8 @@
     background-color:  rgba(238, 160, 173, 0.3);
     border-radius: 10px;
     padding: 10px;
+   
+    box-shadow: 2px 2px 5px rgb(216, 133, 133), -2px -2px 5px rgb(216, 133, 133);
 }
 .weather-forecast img {
     width: 60px;   
