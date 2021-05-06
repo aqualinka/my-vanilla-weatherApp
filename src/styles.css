@@ -86,7 +86,6 @@
 .weather-forecast-col{
     margin: 0 auto;
     text-align: center;
-    width: fit-content;
     min-width: 15%;
     background: rgba(238, 160, 173, 0.5);
     border-radius:  50%;
