@@ -54,33 +54,34 @@
                 <div class="row ">
                     <div class="col-12">
                         <h1 id="city-heading"></h1>
-                        <img src="" alt="clear" id="icon">             
+                        <div  id="weather-temp"> <img src="" alt="clear" id="icon"> 
+                            <span id="temperature"></span><span id="units">ºC</span>
+                        </div>
                     </div>  
                 </div>   
-
-                <div class="row">  
-                    <div class="col">
-                        <ul class="list" id="weather-temp">   
-                            <li>
-                                <span id="temperature"></span><span id="units">ºC</span>
-                            </li>   
+                
+                <div class="row" >  
+                    <div class="col-6 ">
+                        <ul class="list-details" >  
+                            <li id="description"></li>     
                             <li id="real-feel">real feel 
                                 <span id="feels-like"></span><span id="celsius-feel">ºC</span>
-                            </li>
+                            </li>  
                         </ul>
-                    </div>           
-                    <div class="col">
-                        <ul class="list" id="weather-details">
-                            <li id="description"></li>   
+                    </div>  
+
+                    <div class="col-6">
+                        <ul class="list-details">
                             <li>wind speed <span id="wind-speed"></span>m/s</li>
                             <li>humidity <span id="humidity"></span>%</li>
                         </ul>   
-                    </div>                    
+                    </div>
+                                   
                 </div> 
-                <hr>
+              
             </div>   
             <div id="next-days-title">
-                 next 5 days ===>
+                 next 5 days <i class="far fa-hand-point-down"></i>
             </div>
 
             <div class="weather-forecast" id="forecast"></div>

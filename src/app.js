@@ -34,7 +34,7 @@
     if (minutes < 10){
         minutes = `0${minutes}`;
     }
-    let currentDate = `Hello! It's ${day} ${date} ${month} ${hours}:${minutes}`;
+    let currentDate = `Hello! Today's ${day} ${date} ${month} ${hours}:${minutes}`;
     return currentDate;
 }
 
@@ -77,7 +77,7 @@ forecastElement.innerHTML = forecastHTML;
 
 //do api call for weather forecast through coordinates
 function getForecast(coordinates){
-  //console.log(coordinates);
+  console.log(coordinates);
   let apiKey = "02466604a7f7484e8595ebcea0826deb";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
@@ -149,4 +149,4 @@ searchForm.addEventListener("submit",handleSubmit);
 let currentButton = document.querySelector(".button-current");
 currentButton.addEventListener("click",getCurrentLocation);
 
-showCity("arrecife");
+showCity("Las Palmas");
