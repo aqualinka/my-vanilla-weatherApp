@@ -102,7 +102,7 @@ function showWeather(response){
   tempFeelElement.innerHTML = Math.round(response.data.main.feels_like);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
+  windElement.innerHTML = Math.round(response.data.wind.speed * 3.6);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute("src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -132,8 +132,8 @@ function getCurrentLocation(event) {
   }
   
 //get position from server
-function showPosition(position) {
-  //console.log(position.coords.latitude);
+function showPosition(position) { 
+   //console.log(position.coords.latitude);
   //console.log(position.coords.longitude);
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
